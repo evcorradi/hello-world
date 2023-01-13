@@ -1,7 +1,10 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.Heart)
+    music.playMelody("G F G A - F E D ", 120)
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showIcon(IconNames.Duck)
+    basic.showString("please shake for a heart!")
 })
-basic.showIcon(IconNames.SmallHeart)
+input.onGesture(Gesture.Shake, function () {
+    basic.showIcon(IconNames.Heart)
+})
+basic.showString("my name is evelyn")
