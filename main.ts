@@ -1,10 +1,6 @@
 input.onButtonPressed(Button.A, function () {
-    music.playMelody("G F G A - F E D ", 120)
+    for (let index = 0; index < 20; index++) {
+        music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 200, 1, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
+    }
 })
-input.onButtonPressed(Button.B, function () {
-    basic.showString("please shake for a heart!")
-})
-input.onGesture(Gesture.Shake, function () {
-    basic.showIcon(IconNames.Heart)
-})
-basic.showString(" Hi my name is zip")
+basic.showIcon(IconNames.Heart)
